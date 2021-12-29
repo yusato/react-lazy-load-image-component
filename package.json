@@ -41,7 +41,6 @@
 		"test": "jest",
 		"start": "webpack --watch",
 		"build": "webpack",
-		"install": "npm run build",
 		"prettier": "prettier --write \"**/*.{js,jsx,json}\"",
 		"lint": "eslint src --ext=js,jsx"
 	},
