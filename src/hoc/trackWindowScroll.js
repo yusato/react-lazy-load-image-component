@@ -38,7 +38,10 @@ const trackWindowScroll = BaseComponent => {
 				},
 			};
 
-			this.baseComponentRef = React.createRef();
+			this.baseComponentRef = null;
+			this.setBaseComponentRef = element => {
+				this.baseComponentRef = element;
+			};
 		}
 
 		componentDidMount() {
@@ -124,7 +127,7 @@ const trackWindowScroll = BaseComponent => {
 
 			return (
 				<BaseComponent
-					ref={this.baseComponentRef}
+					ref={this.setBaseComponentRef}
 					scrollPosition={scrollPosition}
 					{...props}
 				/>
